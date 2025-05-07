@@ -113,3 +113,22 @@ document.getElementById("theme-toggle").addEventListener("click", () => {
         themeButton.textContent = "🌑 Dark Mode";
     }
 });
+document.getElementById('swapBtn').addEventListener('click', function () {
+    const from = document.getElementById('from-currency');
+    const to = document.getElementById('to-currency');
+    const temp = from.value;
+
+    // Swap the currency values
+    from.value = to.value;
+    to.value = temp;
+
+    // Trigger currency conversion after swap
+    convertCurrency();
+});
+document.getElementById("rate-date").textContent = `Last updated: ${new Date().toLocaleString()}`;
+const result = document.getElementById('result');
+result.classList.add('show');
+
+
+
+  
