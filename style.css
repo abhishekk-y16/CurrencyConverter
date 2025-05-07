@@ -17,7 +17,7 @@
     background: linear-gradient(135deg, #333, #000); /* Darker gradient for dark mode */
     color: #fff;
   }
-  
+
   /* Container and Layout */
   .container {
     width: 100%;
@@ -157,7 +157,7 @@ body.dark-mode #theme-toggle {
     text-align: center;
     margin-top: 30px;
     font-size: 14px;
-    color: #888;
+    color: #d9a9a9;
   }
   
   footer a {
@@ -187,21 +187,109 @@ body.dark-mode #theme-toggle {
   }
   
   /* Responsive Design */
-  @media (max-width: 768px) {
-    .converter {
-      padding: 20px;
-    }
-  
-    h1 {
-      font-size: 28px;
-    }
-  
-    select, input {
-      padding: 10px;
-    }
-  
-    .result {
-      font-size: 18px;
-    }
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    background-color: #f9f9f9;
   }
+
+  .converter {
+    padding: 25px 20px;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+
+  select, input {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .result {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: #27ae60;
+  }
+  .result h3 {
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  .result h3.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+  .swap-btn {
+    width: 100%;
+    margin: 15px 0;
+    font-size: 18px;
+  }
+}
+
+  
+  .swap-btn {
+    background: linear-gradient(135deg, #3498db, #6dd5fa);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(52, 152, 219, 0.3);
+    transition: all 0.3s ease;
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .swap-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-25deg);
+    transition: left 0.5s;
+  }
+  
+  .swap-btn:hover::before {
+    left: 130%;
+  }
+  
+  .swap-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(52, 152, 219, 0.4);
+  }
+  /* Default light mode */
+#rate-date {
+  color: #160505; /* Dark text for light background */
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Dark mode style */
+body.dark-mode #rate-date {
+  color: #120404; /* Light text for dark background */
+}
+
   
