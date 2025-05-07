@@ -77,7 +77,7 @@ async function convertCurrency() {
     const result = document.getElementById("result");
 
     if (amount === "") {
-        result.innerHTML = "";
+        result.innerHTML = "Converted amount will show here.";
         return;
     }
 
